@@ -1,0 +1,768 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "slug": "off-white-siyah-kapsonlu-sweatshirt",
+      "name": "Off-White Arrow Hoodie",
+      "name_tr": "Off-White Ok Logolu Kapşonlu Sweatshirt",
+      "description_tr": "İkonik ok logosu ile bezeli premium pamuklu kapşonlu sweatshirt. Oversized kesim, her beden için rahat ve şık görünüm sağlar.",
+      "price": 4850,
+      "original_price": 6200,
+      "image_color": "#1a1a1a",
+      "image_pattern": "stripe",
+      "is_featured": 1,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "off-white",
+      "brand_name": "Off-White",
+      "brand_tier": "luxury",
+      "brand_logo_color": "#1a1a1a",
+      "category_slug": "ust-giyim",
+      "category_name_tr": "Üst Giyim",
+      "category_icon": "👕",
+      "sizes": [
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "off-white-beyaz-tshirt-diagonal",
+      "name": "Off-White Diagonal T-Shirt",
+      "name_tr": "Off-White Diyagonal Logolu Tişört",
+      "description_tr": "Off-White'ın imzası olan çapraz şerit detaylı beyaz tişört. Yüksek kalite pamuk kumaş, geniş beden aralığı.",
+      "price": 2950,
+      "original_price": null,
+      "image_color": "#f5f5f0",
+      "image_pattern": "diagonal",
+      "is_featured": 1,
+      "is_new": 1,
+      "stock_status": "in_stock",
+      "brand_slug": "off-white",
+      "brand_name": "Off-White",
+      "brand_tier": "luxury",
+      "brand_logo_color": "#1a1a1a",
+      "category_slug": "ust-giyim",
+      "category_name_tr": "Üst Giyim",
+      "category_icon": "👕",
+      "sizes": [
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "allsaints-deri-ceket-moto",
+      "name": "AllSaints Moto Leather Jacket",
+      "name_tr": "AllSaints Moto Deri Ceket",
+      "description_tr": "AllSaints'ın klasik motosikletçi ceketi. Gerçek deri, metal fermuar detayları. Büyük bedenlerde özel kesim.",
+      "price": 8900,
+      "original_price": 11500,
+      "image_color": "#1c1c1c",
+      "image_pattern": "leather",
+      "is_featured": 1,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "all-saints",
+      "brand_name": "AllSaints",
+      "brand_tier": "premium",
+      "brand_logo_color": "#2d2d2d",
+      "category_slug": "dis-giyim",
+      "category_name_tr": "Dış Giyim",
+      "category_icon": "🧥",
+      "sizes": [
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        },
+        {
+          "label": "5XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "allsaints-midi-elbise",
+      "name": "AllSaints Midi Dress",
+      "name_tr": "AllSaints Midi Elbise",
+      "description_tr": "Asimetrik kesim midi elbise. Viskoz kumaş ile akıcı düşüş. Her vücut tipine uygun kalıp.",
+      "price": 4100,
+      "original_price": 5300,
+      "image_color": "#2C3E50",
+      "image_pattern": "solid",
+      "is_featured": 1,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "all-saints",
+      "brand_name": "AllSaints",
+      "brand_tier": "premium",
+      "brand_logo_color": "#2d2d2d",
+      "category_slug": "elbise-etek",
+      "category_name_tr": "Elbise & Etek",
+      "category_icon": "👗",
+      "sizes": [
+        {
+          "label": "XS",
+          "is_plus": 0
+        },
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "trendbizz-plus-wide-leg-pantolon",
+      "name": "Trendbizz Wide Leg Trousers",
+      "name_tr": "Trendbizz Büyük Beden Wide Leg Pantolon",
+      "description_tr": "Büyük bedenler için özel tasarlanan wide leg pantolon. Yüksek bel, geniş paça, her figürü ön plana çıkarır.",
+      "price": 899,
+      "original_price": 1250,
+      "image_color": "#4A5568",
+      "image_pattern": "solid",
+      "is_featured": 1,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "trendbizz",
+      "brand_name": "Trendbizz",
+      "brand_tier": "casual",
+      "brand_logo_color": "#7C3AED",
+      "category_slug": "alt-giyim",
+      "category_name_tr": "Alt Giyim",
+      "category_icon": "👖",
+      "sizes": [
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        },
+        {
+          "label": "5XL",
+          "is_plus": 1
+        },
+        {
+          "label": "6XL",
+          "is_plus": 1
+        },
+        {
+          "label": "42",
+          "is_plus": 1
+        },
+        {
+          "label": "44",
+          "is_plus": 1
+        },
+        {
+          "label": "46",
+          "is_plus": 1
+        },
+        {
+          "label": "48",
+          "is_plus": 1
+        },
+        {
+          "label": "50",
+          "is_plus": 1
+        },
+        {
+          "label": "52",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "trendbizz-plus-wrap-elbise",
+      "name": "Trendbizz Wrap Dress",
+      "name_tr": "Trendbizz Büyük Beden Kruvaze Elbise",
+      "description_tr": "Bağlamalı kruvaze elbise, büyük bedenler için özel orantılı kesim. Beli vurgular, her figürü güzel gösterir.",
+      "price": 1199,
+      "original_price": null,
+      "image_color": "#7C3AED",
+      "image_pattern": "solid",
+      "is_featured": 1,
+      "is_new": 1,
+      "stock_status": "in_stock",
+      "brand_slug": "trendbizz",
+      "brand_name": "Trendbizz",
+      "brand_tier": "casual",
+      "brand_logo_color": "#7C3AED",
+      "category_slug": "elbise-etek",
+      "category_name_tr": "Elbise & Etek",
+      "category_icon": "👗",
+      "sizes": [
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        },
+        {
+          "label": "5XL",
+          "is_plus": 1
+        },
+        {
+          "label": "6XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "north-face-puffer-jacket",
+      "name": "The North Face Puffer Jacket",
+      "name_tr": "The North Face Şişme Mont",
+      "description_tr": "Geri dönüştürülmüş dolgu malzemeli, rüzgar ve yağmur geçirmez şişme mont. Polar iç astar ile ekstra sıcaklık.",
+      "price": 5900,
+      "original_price": 7200,
+      "image_color": "#DC2626",
+      "image_pattern": "solid",
+      "is_featured": 1,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "north-face",
+      "brand_name": "The North Face",
+      "brand_tier": "premium",
+      "brand_logo_color": "#E63329",
+      "category_slug": "dis-giyim",
+      "category_name_tr": "Dış Giyim",
+      "category_icon": "🧥",
+      "sizes": [
+        {
+          "label": "XS",
+          "is_plus": 0
+        },
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "allsaints-merino-triko",
+      "name": "AllSaints Merino Jumper",
+      "name_tr": "AllSaints Merino Triko Kazak",
+      "description_tr": "İnce örme merino yünü kazak. Minimal tasarım, maksimum konfor. Kış ve ilkbahar geçişi için ideal.",
+      "price": 3200,
+      "original_price": null,
+      "image_color": "#8B7355",
+      "image_pattern": "knit",
+      "is_featured": 0,
+      "is_new": 1,
+      "stock_status": "in_stock",
+      "brand_slug": "all-saints",
+      "brand_name": "AllSaints",
+      "brand_tier": "premium",
+      "brand_logo_color": "#2d2d2d",
+      "category_slug": "ust-giyim",
+      "category_name_tr": "Üst Giyim",
+      "category_icon": "👕",
+      "sizes": [
+        {
+          "label": "XS",
+          "is_plus": 0
+        },
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "trendbizz-plus-oversize-blazer",
+      "name": "Trendbizz Oversized Blazer",
+      "name_tr": "Trendbizz Büyük Beden Oversize Blazer",
+      "description_tr": "Yapılandırılmış omuz, uzun kesim oversize blazer. Ofis ve günlük kullanım için çok yönlü tasarım.",
+      "price": 1450,
+      "original_price": 1899,
+      "image_color": "#1F2937",
+      "image_pattern": "solid",
+      "is_featured": 0,
+      "is_new": 1,
+      "stock_status": "in_stock",
+      "brand_slug": "trendbizz",
+      "brand_name": "Trendbizz",
+      "brand_tier": "casual",
+      "brand_logo_color": "#7C3AED",
+      "category_slug": "dis-giyim",
+      "category_name_tr": "Dış Giyim",
+      "category_icon": "🧥",
+      "sizes": [
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        },
+        {
+          "label": "5XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "trendbizz-plus-modal-tshirt",
+      "name": "Trendbizz Modal T-Shirt Plus",
+      "name_tr": "Trendbizz Büyük Beden Modal Tişört",
+      "description_tr": "Modal-pamuk karışımı, ultra yumuşak tişört. Büyük bedenler için uzatılmış uzunluk, genişletilmiş omuz.",
+      "price": 449,
+      "original_price": null,
+      "image_color": "#E5E7EB",
+      "image_pattern": "solid",
+      "is_featured": 0,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "trendbizz",
+      "brand_name": "Trendbizz",
+      "brand_tier": "casual",
+      "brand_logo_color": "#7C3AED",
+      "category_slug": "ust-giyim",
+      "category_name_tr": "Üst Giyim",
+      "category_icon": "👕",
+      "sizes": [
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        },
+        {
+          "label": "5XL",
+          "is_plus": 1
+        },
+        {
+          "label": "6XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "zara-structured-coat",
+      "name": "Zara Structured Coat",
+      "name_tr": "Zara Yapılandırılmış Kaban",
+      "description_tr": "Klasik yaka, düğmeli kapanma ile şık yapılandırılmış kaban. Kış koleksiyonundan özel seçim.",
+      "price": 2199,
+      "original_price": 2999,
+      "image_color": "#6B7280",
+      "image_pattern": "solid",
+      "is_featured": 0,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "zara",
+      "brand_name": "Zara",
+      "brand_tier": "premium",
+      "brand_logo_color": "#111",
+      "category_slug": "dis-giyim",
+      "category_name_tr": "Dış Giyim",
+      "category_icon": "🧥",
+      "sizes": [
+        {
+          "label": "XS",
+          "is_plus": 0
+        },
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "zara-satin-midi-etek",
+      "name": "Zara Satin Midi Skirt",
+      "name_tr": "Zara Saten Midi Etek",
+      "description_tr": "Beli lastikli saten midi etek. Akıcı düşüş, hafif parlak görünüm. Gece ve gündüz kombin yapılabilir.",
+      "price": 899,
+      "original_price": null,
+      "image_color": "#D4AF8B",
+      "image_pattern": "solid",
+      "is_featured": 0,
+      "is_new": 1,
+      "stock_status": "in_stock",
+      "brand_slug": "zara",
+      "brand_name": "Zara",
+      "brand_tier": "premium",
+      "brand_logo_color": "#111",
+      "category_slug": "elbise-etek",
+      "category_name_tr": "Elbise & Etek",
+      "category_icon": "👗",
+      "sizes": [
+        {
+          "label": "XS",
+          "is_plus": 0
+        },
+        {
+          "label": "S",
+          "is_plus": 0
+        },
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "mango-plus-linen-pantolon",
+      "name": "Mango Plus Linen Trousers",
+      "name_tr": "Mango Büyük Beden Keten Pantolon",
+      "description_tr": "Yazlık keten kumaş, rahat kesim pantolon. Büyük beden aralığı ile herkese uygun.",
+      "price": 1299,
+      "original_price": 1799,
+      "image_color": "#F3E8D5",
+      "image_pattern": "solid",
+      "is_featured": 0,
+      "is_new": 0,
+      "stock_status": "in_stock",
+      "brand_slug": "mango",
+      "brand_name": "Mango",
+      "brand_tier": "premium",
+      "brand_logo_color": "#b5894c",
+      "category_slug": "alt-giyim",
+      "category_name_tr": "Alt Giyim",
+      "category_icon": "👖",
+      "sizes": [
+        {
+          "label": "M",
+          "is_plus": 0
+        },
+        {
+          "label": "L",
+          "is_plus": 0
+        },
+        {
+          "label": "XL",
+          "is_plus": 1
+        },
+        {
+          "label": "2XL",
+          "is_plus": 1
+        },
+        {
+          "label": "3XL",
+          "is_plus": 1
+        },
+        {
+          "label": "4XL",
+          "is_plus": 1
+        },
+        {
+          "label": "44",
+          "is_plus": 1
+        },
+        {
+          "label": "46",
+          "is_plus": 1
+        },
+        {
+          "label": "48",
+          "is_plus": 1
+        },
+        {
+          "label": "50",
+          "is_plus": 1
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "slug": "ust-giyim",
+      "name": "Tops",
+      "name_tr": "Üst Giyim",
+      "icon": "👕"
+    },
+    {
+      "id": 2,
+      "slug": "alt-giyim",
+      "name": "Bottoms",
+      "name_tr": "Alt Giyim",
+      "icon": "👖"
+    },
+    {
+      "id": 3,
+      "slug": "elbise-etek",
+      "name": "Dresses",
+      "name_tr": "Elbise & Etek",
+      "icon": "👗"
+    },
+    {
+      "id": 4,
+      "slug": "dis-giyim",
+      "name": "Outerwear",
+      "name_tr": "Dış Giyim",
+      "icon": "🧥"
+    },
+    {
+      "id": 5,
+      "slug": "aksesuar",
+      "name": "Accessories",
+      "name_tr": "Aksesuar",
+      "icon": "👜"
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "slug": "off-white",
+      "name": "Off-White",
+      "tier": "luxury",
+      "logo_color": "#1a1a1a"
+    },
+    {
+      "id": 2,
+      "slug": "all-saints",
+      "name": "AllSaints",
+      "tier": "premium",
+      "logo_color": "#2d2d2d"
+    },
+    {
+      "id": 3,
+      "slug": "trendbizz",
+      "name": "Trendbizz",
+      "tier": "casual",
+      "logo_color": "#7C3AED"
+    },
+    {
+      "id": 4,
+      "slug": "zara",
+      "name": "Zara",
+      "tier": "premium",
+      "logo_color": "#111"
+    },
+    {
+      "id": 5,
+      "slug": "mango",
+      "name": "Mango",
+      "tier": "premium",
+      "logo_color": "#b5894c"
+    },
+    {
+      "id": 6,
+      "slug": "north-face",
+      "name": "The North Face",
+      "tier": "premium",
+      "logo_color": "#E63329"
+    }
+  ]
+}
