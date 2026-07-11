@@ -29,103 +29,136 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const plusSizes = product.sizes.filter(s => s.is_plus === 1);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="wrap" style={{ paddingTop: '40px', paddingBottom: '80px' }}>
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8 flex-wrap">
-        <Link href="/" className="hover:text-gray-900 dark:hover:text-white">Ana Sayfa</Link>
-        <span>/</span>
-        <Link href="/urunler" className="hover:text-gray-900 dark:hover:text-white">Ürünler</Link>
-        <span>/</span>
-        <span className="text-gray-900 dark:text-white font-medium">{product.name_tr}</span>
+      <nav style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '48px', flexWrap: 'wrap' }}>
+        <Link href="/" className="muted-link" style={{ fontSize: '12px' }}>Ana Sayfa</Link>
+        <span style={{ color: 'var(--bd)', fontSize: '12px' }}>/</span>
+        <Link href="/urunler" className="muted-link" style={{ fontSize: '12px' }}>Ürünler</Link>
+        <span style={{ color: 'var(--bd)', fontSize: '12px' }}>/</span>
+        <span style={{ fontSize: '12px', color: 'var(--fg)' }}>{product.name_tr}</span>
       </nav>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-        {/* Product image */}
-        <div className="order-1 lg:order-none">
-          <div
-            className={`product-image-placeholder pattern-${product.image_pattern} rounded-3xl h-80 sm:h-96 lg:h-[520px] relative`}
-            style={{ backgroundColor: product.image_color }}
-          >
-            {/* Brand watermark */}
-            <div className="absolute bottom-8 left-8">
-              <span className="text-white/80 font-black text-4xl sm:text-5xl tracking-tight drop-shadow-sm">
-                {product.brand_name}
-              </span>
-            </div>
+      {/* Main grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '64px', alignItems: 'start' }}>
+        {/* Swatch */}
+        <div
+          style={{
+            backgroundColor: product.image_color,
+            height: '480px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden',
+            position: 'relative',
+          }}
+        >
+          <span className="swatch-ghost">{product.brand_name}</span>
 
-            {/* Badges */}
-            <div className="absolute top-4 left-4 flex flex-col gap-2">
-              {product.is_new === 1 && (
-                <span className="bg-white text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow">YENİ</span>
-              )}
-              {discount && (
-                <span className="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">-{discount}%</span>
-              )}
-            </div>
+          <div
+            style={{ position: 'absolute', top: '16px', left: '16px', display: 'flex', flexDirection: 'column', gap: '6px' }}
+          >
+            {product.is_new === 1 && (
+              <span
+                className="label"
+                style={{ backgroundColor: 'var(--paper)', color: 'var(--ink)', padding: '4px 10px' }}
+              >
+                YENİ
+              </span>
+            )}
+            {discount && (
+              <span
+                className="label"
+                style={{ backgroundColor: 'var(--accent)', color: 'var(--paper)', padding: '4px 10px' }}
+              >
+                -{discount}%
+              </span>
+            )}
           </div>
         </div>
 
-        {/* Product info */}
+        {/* Info */}
         <div>
-          {/* Brand */}
-          <Link href={`/markalar/${product.brand_slug}`} className="inline-flex items-center gap-2 mb-3 group">
-            <div className="w-5 h-5 rounded-full" style={{ backgroundColor: product.brand_logo_color }} />
-            <span className="text-sm font-semibold text-gray-500 dark:text-gray-400 group-hover:text-violet-600 transition-colors">
-              {product.brand_name}
-            </span>
+          <Link
+            href={`/markalar/${product.brand_slug}`}
+            className="label"
+            style={{ color: 'var(--fg2)', textDecoration: 'none', display: 'block', marginBottom: '12px' }}
+          >
+            {product.brand_name}
           </Link>
 
-          <h1 className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">
+          <h1
+            style={{
+              fontSize: 'clamp(22px, 2.5vw, 32px)',
+              fontWeight: 500,
+              color: 'var(--fg)',
+              lineHeight: 1.25,
+              letterSpacing: '-0.01em',
+              marginBottom: '24px',
+            }}
+          >
             {product.name_tr}
           </h1>
 
           {/* Price */}
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-3xl font-black text-gray-900 dark:text-white">
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'baseline',
+              gap: '12px',
+              marginBottom: '32px',
+              paddingBottom: '32px',
+              borderBottom: '1px solid var(--bd)',
+            }}
+          >
+            <span
+              className="font-display"
+              style={{ fontSize: '36px', fontWeight: 700, color: 'var(--fg)', lineHeight: 1 }}
+            >
               {formatPrice(product.price)}
             </span>
             {product.original_price && (
               <>
-                <span className="text-xl text-gray-400 line-through">{formatPrice(product.original_price)}</span>
-                <span className="bg-red-100 text-red-600 text-sm font-bold px-2 py-0.5 rounded-full">
-                  %{discount} İndirim
+                <span style={{ fontSize: '18px', color: 'var(--fg2)', textDecoration: 'line-through' }}>
+                  {formatPrice(product.original_price)}
                 </span>
+                <span className="chip chip-plus">-%{discount}</span>
               </>
             )}
           </div>
 
           {/* Description */}
-          <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
+          <p
+            style={{
+              fontSize: '14px',
+              lineHeight: 1.85,
+              color: 'var(--fg2)',
+              marginBottom: '32px',
+              paddingBottom: '32px',
+              borderBottom: '1px solid var(--bd)',
+            }}
+          >
             {product.description_tr}
           </p>
 
           {/* Sizes */}
-          <div className="mb-8">
+          <div style={{ marginBottom: '32px' }}>
             {regularSizes.length > 0 && (
-              <div className="mb-4">
-                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 uppercase tracking-wide">
-                  Standart Bedenler
-                </h3>
-                <div className="flex flex-wrap gap-2">
+              <div style={{ marginBottom: '16px' }}>
+                <p className="label" style={{ marginBottom: '10px' }}>Standart Bedenler</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                   {regularSizes.map(s => (
-                    <span key={s.label} className="text-sm font-semibold px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900">
-                      {s.label}
-                    </span>
+                    <span key={s.label} className="chip">{s.label}</span>
                   ))}
                 </div>
               </div>
             )}
-
             {plusSizes.length > 0 && (
               <div>
-                <h3 className="text-sm font-semibold text-violet-600 mb-2 uppercase tracking-wide flex items-center gap-1">
-                  <span>✦</span> Büyük Bedenler
-                </h3>
-                <div className="flex flex-wrap gap-2">
+                <p className="label" style={{ marginBottom: '10px', color: 'var(--accent)' }}>Büyük Bedenler</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                   {plusSizes.map(s => (
-                    <span key={s.label} className="text-sm font-semibold px-3 py-1.5 rounded-lg border border-violet-300 dark:border-violet-700 text-violet-700 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50">
-                      {s.label}
-                    </span>
+                    <span key={s.label} className="chip chip-plus">{s.label}</span>
                   ))}
                 </div>
               </div>
@@ -133,25 +166,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
 
           {/* Category */}
-          <div className="flex items-center gap-2 mb-8">
-            <span className="text-lg">{product.category_icon}</span>
-            <Link href={`/urunler?kategori=${product.category_slug}`} className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
-              {product.category_name_tr}
-            </Link>
-          </div>
+          <Link
+            href={`/urunler?kategori=${product.category_slug}`}
+            className="muted-link"
+            style={{ fontSize: '12px', display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '40px' }}
+          >
+            <span>{product.category_icon}</span>
+            <span>{product.category_name_tr}</span>
+          </Link>
 
-          {/* CTA */}
-          <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-5 border border-gray-100 dark:border-gray-800">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg">📍</span>
-              <span className="font-bold text-gray-900 dark:text-white">Mağazamızda Mevcut</span>
-            </div>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Bu ürün Beşiktaş mağazamızda sizi bekliyor. Tüm beden seçenekleri için mağazamızı ziyaret edin.
+          {/* Store CTA */}
+          <div style={{ border: '1px solid var(--bd)', padding: '20px 24px' }}>
+            <p style={{ fontSize: '13px', fontWeight: 500, color: 'var(--fg)', marginBottom: '8px' }}>
+              Mağazamızda Mevcut
             </p>
-            <div className="mt-4 text-sm text-gray-500">
-              🕐 Pzt–Cmt: 10:00–21:00 · Pazar: 11:00–20:00
-            </div>
+            <p style={{ fontSize: '12px', color: 'var(--fg2)', lineHeight: 1.75, marginBottom: '14px' }}>
+              Bu ürün Beşiktaş mağazamızda sizi bekliyor. Tüm beden seçenekleri için ziyaret edin.
+            </p>
+            <p className="label">Pzt–Cmt 10:00–21:00 · Pazar 11:00–20:00</p>
           </div>
         </div>
       </div>

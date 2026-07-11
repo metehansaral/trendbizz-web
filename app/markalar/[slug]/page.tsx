@@ -17,6 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+const TIER_LABELS: Record<string, string> = {
+  luxury: 'Lüks',
+  premium: 'Premium',
+  casual: 'Günlük',
+};
+
 export default async function BrandPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const brand = getAllBrands().find(b => b.slug === slug);
@@ -25,39 +31,44 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
   const products = getProductsByBrand(slug);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="wrap" style={{ paddingTop: '40px', paddingBottom: '80px' }}>
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-        <Link href="/markalar" className="hover:text-gray-900 dark:hover:text-white transition-colors">Markalar</Link>
-        <span>/</span>
-        <span className="text-gray-900 dark:text-white font-medium">{brand.name}</span>
+      <nav style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '48px' }}>
+        <Link href="/markalar" className="muted-link" style={{ fontSize: '12px' }}>Markalar</Link>
+        <span style={{ color: 'var(--bd)', fontSize: '12px' }}>/</span>
+        <span style={{ fontSize: '12px', color: 'var(--fg)' }}>{brand.name}</span>
       </nav>
 
       {/* Brand header */}
-      <div className="flex items-start gap-6 mb-10">
-        <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-black text-2xl flex-shrink-0"
-          style={{ backgroundColor: brand.logo_color }}
+      <div style={{ paddingBottom: '40px', borderBottom: '1px solid var(--bd)', marginBottom: '48px' }}>
+        <p className="label" style={{ marginBottom: '8px' }}>{TIER_LABELS[brand.tier] ?? brand.tier}</p>
+        <h1
+          className="font-display"
+          style={{
+            fontSize: 'clamp(40px, 6vw, 80px)',
+            fontWeight: 700,
+            color: 'var(--fg)',
+            lineHeight: 1,
+            letterSpacing: '-0.03em',
+            marginBottom: '8px',
+          }}
         >
-          {brand.name.charAt(0)}
-        </div>
-        <div>
-          <h1 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">{brand.name}</h1>
-          <p className="text-gray-500 dark:text-gray-400 mt-1">{products.length} ürün</p>
-        </div>
+          {brand.name}
+        </h1>
+        <p className="label">{products.length} ürün</p>
       </div>
 
-      {/* Products */}
       {products.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="auto-grid">
           {products.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       ) : (
-        <div className="text-center py-20">
-          <p className="text-4xl mb-4">📦</p>
-          <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">Bu markadan henüz ürün yok</p>
+        <div style={{ textAlign: 'center', padding: '80px 0' }}>
+          <p className="font-display" style={{ fontSize: '32px', color: 'var(--fg2)' }}>
+            Henüz ürün yok
+          </p>
         </div>
       )}
     </div>

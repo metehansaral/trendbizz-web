@@ -1,55 +1,104 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-400 mt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer style={{ backgroundColor: 'var(--ink)', color: 'var(--stone)' }}>
+      <div className="wrap" style={{ paddingTop: '64px', paddingBottom: '48px' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gap: '48px',
+            marginBottom: '48px',
+          }}
+        >
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-violet-600 flex items-center justify-center text-white font-black text-sm">
-                TB
-              </div>
-              <span className="font-black text-xl text-white tracking-tight">TRENDBIZZ</span>
-            </div>
-            <p className="text-sm leading-relaxed text-gray-400">
-              Beşiktaş&apos;ın en kapsamlı kıyafet mağazası. Her beden, her stil — Off-White&apos;tan büyük bedenlere uzanan geniş koleksiyon.
+            <p
+              className="font-display"
+              style={{
+                fontWeight: 700,
+                fontSize: '28px',
+                letterSpacing: '-0.02em',
+                color: 'var(--stone)',
+                marginBottom: '12px',
+                lineHeight: 1,
+              }}
+            >
+              Trendbizz
+            </p>
+            <p style={{ fontSize: '13px', lineHeight: 1.75, color: 'rgba(237,235,230,0.4)', maxWidth: '240px' }}>
+              Beşiktaş&apos;ın en kapsamlı kıyafet mağazası. Her beden, her stil.
             </p>
           </div>
 
-          {/* Links */}
+          {/* Collection */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Koleksiyon</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="/urunler" className="hover:text-white transition-colors">Tüm Ürünler</a></li>
-              <li><a href="/buyuk-beden" className="hover:text-violet-400 transition-colors font-medium text-violet-500">Büyük Beden</a></li>
-              <li><a href="/markalar" className="hover:text-white transition-colors">Markalar</a></li>
-              <li><a href="/urunler?yeni=true" className="hover:text-white transition-colors">Yeni Gelenler</a></li>
+            <p
+              className="label"
+              style={{ marginBottom: '16px', color: 'rgba(237,235,230,0.35)', letterSpacing: '0.12em' }}
+            >
+              Koleksiyon
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <li>
+                <Link
+                  href="/urunler"
+                  style={{ fontSize: '13px', color: 'rgba(237,235,230,0.55)', textDecoration: 'none', transition: 'color 150ms ease' }}
+                >
+                  Tüm Ürünler
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/buyuk-beden"
+                  style={{ fontSize: '13px', color: 'var(--accent)', textDecoration: 'none' }}
+                >
+                  Büyük Beden
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/markalar"
+                  style={{ fontSize: '13px', color: 'rgba(237,235,230,0.55)', textDecoration: 'none', transition: 'color 150ms ease' }}
+                >
+                  Markalar
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Store */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Mağaza</h4>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5">📍</span>
-                <span>Beşiktaş, İstanbul<br />Türkiye</span>
+            <p
+              className="label"
+              style={{ marginBottom: '16px', color: 'rgba(237,235,230,0.35)', letterSpacing: '0.12em' }}
+            >
+              Mağaza
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <li style={{ fontSize: '13px', color: 'rgba(237,235,230,0.45)', lineHeight: 1.6 }}>
+                Beşiktaş, İstanbul
               </li>
-              <li className="flex items-center gap-2">
-                <span>🕐</span>
-                <span>Pzt–Cmt: 10:00–21:00<br />Pazar: 11:00–20:00</span>
+              <li style={{ fontSize: '13px', color: 'rgba(237,235,230,0.45)', lineHeight: 1.7 }}>
+                Pzt–Cmt: 10:00–21:00<br />Pazar: 11:00–20:00
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-900 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-600">
-            © 2025 Trendbizz. Tüm hakları saklıdır.
-          </p>
-          <p className="text-xs text-gray-700">
-            Her bedene saygı · Her stile yer
-          </p>
+        <div
+          style={{
+            borderTop: '1px solid rgba(255,255,255,0.06)',
+            paddingTop: '24px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            gap: '8px',
+          }}
+        >
+          <p style={{ fontSize: '11px', color: 'rgba(237,235,230,0.2)' }}>© 2025 Trendbizz.</p>
+          <p style={{ fontSize: '11px', color: 'rgba(237,235,230,0.2)' }}>Her bedene saygı · Her stile yer</p>
         </div>
       </div>
     </footer>

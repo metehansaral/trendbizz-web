@@ -1,71 +1,110 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-violet-600 flex items-center justify-center text-white font-black text-sm">
-              TB
-            </div>
-            <span className="font-black text-xl tracking-tight text-gray-900 dark:text-white group-hover:text-violet-600 transition-colors">
-              TRENDBIZZ
-            </span>
-          </Link>
+    <header
+      className="sticky top-0 z-50"
+      style={{
+        backgroundColor: 'var(--bg)',
+        borderBottom: `1px solid ${scrolled ? 'var(--bd)' : 'transparent'}`,
+        transition: 'border-color 200ms ease',
+      }}
+    >
+      <div
+        className="wrap"
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '56px' }}
+      >
+        {/* Wordmark */}
+        <Link href="/" style={{ textDecoration: 'none', color: 'var(--fg)' }}>
+          <span
+            className="font-display"
+            style={{ fontWeight: 700, fontSize: '22px', letterSpacing: '-0.02em', lineHeight: 1 }}
+          >
+            Trendbizz
+          </span>
+        </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              Ana Sayfa
-            </Link>
-            <Link href="/urunler" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              Ürünler
-            </Link>
-            <Link href="/buyuk-beden" className="text-sm font-semibold text-violet-600 hover:text-violet-700 transition-colors">
-              Büyük Beden
-            </Link>
-            <Link href="/markalar" className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              Markalar
-            </Link>
-          </nav>
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center" style={{ gap: '36px' }}>
+          <Link href="/urunler" className="nav-link">Ürünler</Link>
+          <Link href="/buyuk-beden" className="nav-link" style={{ color: 'var(--accent)' }}>Büyük Beden</Link>
+          <Link href="/markalar" className="nav-link">Markalar</Link>
+        </nav>
 
-          {/* Location badge + mobile menu */}
-          <div className="flex items-center gap-3">
-            <div className="hidden sm:flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-900 px-3 py-1.5 rounded-full">
-              <span>📍</span>
-              <span>Beşiktaş, İstanbul</span>
-            </div>
-
-            <button
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Menü"
-            >
-              <div className="w-5 h-0.5 bg-current mb-1"></div>
-              <div className="w-5 h-0.5 bg-current mb-1"></div>
-              <div className="w-5 h-0.5 bg-current"></div>
-            </button>
-          </div>
+        {/* Location + hamburger */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <span className="label hidden md:block">Beşiktaş, İstanbul</span>
+          <button
+            className="md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menü"
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '4px',
+              color: 'var(--fg)',
+              lineHeight: 0,
+            }}
+          >
+            <svg width="24" height="18" viewBox="0 0 24 18" fill="none">
+              <line x1="0" y1="1" x2="24" y2="1" stroke="currentColor" strokeWidth="1.5"/>
+              <line x1="0" y1="9" x2="24" y2="9" stroke="currentColor" strokeWidth="1.5"/>
+              <line x1="0" y1="17" x2="16" y2="17" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          </button>
         </div>
-
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="md:hidden border-t border-gray-100 dark:border-gray-900 py-4 space-y-3">
-            <Link href="/" className="block text-sm font-medium py-1 text-gray-700 dark:text-gray-300" onClick={() => setMenuOpen(false)}>Ana Sayfa</Link>
-            <Link href="/urunler" className="block text-sm font-medium py-1 text-gray-700 dark:text-gray-300" onClick={() => setMenuOpen(false)}>Ürünler</Link>
-            <Link href="/buyuk-beden" className="block text-sm font-semibold py-1 text-violet-600" onClick={() => setMenuOpen(false)}>Büyük Beden</Link>
-            <Link href="/markalar" className="block text-sm font-medium py-1 text-gray-700 dark:text-gray-300" onClick={() => setMenuOpen(false)}>Markalar</Link>
-            <div className="pt-2 text-xs text-gray-500">📍 Beşiktaş, İstanbul</div>
-          </div>
-        )}
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          className="md:hidden"
+          style={{
+            borderTop: '1px solid var(--bd)',
+            backgroundColor: 'var(--bg)',
+            padding: '16px 5vw 24px',
+          }}
+        >
+          <Link
+            href="/urunler"
+            className="nav-link"
+            style={{ display: 'block', padding: '12px 0', borderBottom: '1px solid var(--bd)' }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Ürünler
+          </Link>
+          <Link
+            href="/buyuk-beden"
+            className="nav-link"
+            style={{ display: 'block', padding: '12px 0', borderBottom: '1px solid var(--bd)', color: 'var(--accent)' }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Büyük Beden
+          </Link>
+          <Link
+            href="/markalar"
+            className="nav-link"
+            style={{ display: 'block', padding: '12px 0', borderBottom: '1px solid var(--bd)' }}
+            onClick={() => setMenuOpen(false)}
+          >
+            Markalar
+          </Link>
+          <p className="label" style={{ marginTop: '20px' }}>Beşiktaş, İstanbul</p>
+        </div>
+      )}
     </header>
   );
 }
